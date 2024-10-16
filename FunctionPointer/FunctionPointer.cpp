@@ -17,10 +17,7 @@ void Task2(void)
 
 void Loop(void) 
 {
-	for (int i = 0; i < 10; i++)
-	{
-
-	}
+	
 }
 
 int main()

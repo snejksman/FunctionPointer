@@ -29,9 +29,12 @@ int clsTaskManager::AddTask(void (*p_TaskWrite)(void))
 //-----------------------------------
 bool clsTaskManager::Run(void (*p_TaskFce)(void))
 {
-
 	do 
 	{
+		for (int i = 0; i < 10; i++)
+		{
+			*p_TaskArray[i];
+		}
 		//pozastavit
 		Sleep(1000);
 
