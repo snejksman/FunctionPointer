@@ -1,12 +1,21 @@
 #pragma once
+
+#include <Windows.h>
+
+// pointer na task funkci
+
+typedef void (*p_Tasks)(void);
+
 class clsTaskManager
 {
 	public:
 
+	p_Tasks p_TaskArray[10];
+
 	clsTaskManager(void);	// konstruktor
 	~clsTaskManager(void);	//destruktor
 
-	int AddTask();	// pridat ulohu
-	bool Run();		// zapnout
+	int AddTask(void (*p_Task)(void));	// pridat ulohu
+	bool Run(void (*p_TaskFce)(void));		// zapnout
 	bool Stop();	// vypnout
 };

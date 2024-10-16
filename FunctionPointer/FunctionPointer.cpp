@@ -5,8 +5,31 @@
 
 clsTaskManager * objTManager;
 
+void Task1(void)
+{
+	printf("hhkj");
+}
+
+void Task2(void)
+{
+	printf("hikeagk");
+}
+
+void Loop(void) 
+{
+	for (int i = 0; i < 10; i++)
+	{
+
+	}
+}
 
 int main()
 {
 	objTManager = new clsTaskManager();
+
+	objTManager->AddTask(Task1);
+	objTManager->AddTask(Task2);
+
+	objTManager->Run(Loop);
 }
+
