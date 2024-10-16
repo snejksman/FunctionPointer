@@ -1,5 +1,5 @@
 #include "clsTaskManager.h"
-
+#include <iostream>
 #include <Windows.h>
 
 clsTaskManager::clsTaskManager(void)
@@ -15,7 +15,7 @@ clsTaskManager::~clsTaskManager(void)
 
 int clsTaskManager::AddTask(void (*p_TaskWrite)(void))
 {	
-	for (int i = 0; i < 10; i++)
+	for (int i = 1; i < 10; i++)
 		if (p_TaskArray[i] = NULL)
 		{
 			p_TaskArray[i] = *p_TaskWrite;
@@ -41,6 +41,14 @@ bool clsTaskManager::Run(void (*p_TaskFce)(void))
 		p_TaskFce();
 
 	} while (true);
+}
+
+int clsTaskManager::PrintTaskArray()
+{
+	for (int i = 0; i < 10; i++)
+		 printf("%p", p_TaskArray[i]);
+
+	return true;
 }
 
 bool clsTaskManager::Stop()

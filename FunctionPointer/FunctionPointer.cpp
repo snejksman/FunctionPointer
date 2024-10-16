@@ -26,6 +26,7 @@ int main()
 
 	objTManager->AddTask(Task1);
 	objTManager->AddTask(Task2);
+	objTManager->PrintTaskArray();
 
 	objTManager->Run(Loop);
 }

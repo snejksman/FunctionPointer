@@ -16,6 +16,7 @@ class clsTaskManager
 	~clsTaskManager(void);	//destruktor
 
 	int AddTask(void (*p_Task)(void));	// pridat ulohu
+	int PrintTaskArray(void); // vypise co je v TaskArray
 	bool Run(void (*p_TaskFce)(void));		// zapnout
 	bool Stop();	// vypnout
 };
