@@ -1,6 +1,8 @@
 #pragma once
 class clsTaskManager
 {
+	public:
+
 	clsTaskManager(void);	// konstruktor
 	~clsTaskManager(void);	//destruktor
 
