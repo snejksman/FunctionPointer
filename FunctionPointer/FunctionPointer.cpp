@@ -7,12 +7,12 @@ clsTaskManager * objTManager;
 
 void Task1(void)
 {
-	printf("hhkj");
+	printf("hej %+");
 }
 
 void Task2(void)
 {
-	printf("hikeagk");
+	printf("ty %+");
 }
 
 void Loop(void) 

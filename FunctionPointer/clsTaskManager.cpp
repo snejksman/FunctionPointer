@@ -5,7 +5,10 @@
 clsTaskManager::clsTaskManager(void)
 {
 	for (int i = 0; i < 10; i++)
+	{
 		p_TaskArray[i] = NULL;
+	}
+
 }
 
 clsTaskManager::~clsTaskManager(void)
@@ -15,11 +18,15 @@ clsTaskManager::~clsTaskManager(void)
 
 int clsTaskManager::AddTask(void (*p_TaskWrite)(void))
 {	
-	for (int i = 0; i < 10; i++)
-		if (p_TaskArray[i] = NULL)
+	for (int i = 0; i < 10; i++) 
+	{
+		if (p_TaskArray[i] == NULL)
 		{
 			p_TaskArray[i] = *p_TaskWrite;
+			break;
 		}
+	}
+		
 
 	return true;
 }
@@ -33,7 +40,10 @@ bool clsTaskManager::Run(void (*p_TaskFce)(void))
 	{
 		for (int i = 0; i < 10; i++)
 		{
-			*p_TaskArray[i];
+			if (p_TaskArray[i] != NULL)
+			{
+				p_TaskArray[i]();
+			}
 		}
 		//pozastavit
 		Sleep(1000);
