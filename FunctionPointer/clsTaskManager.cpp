@@ -53,6 +53,14 @@ bool clsTaskManager::Run(void (*p_TaskFce)(void))
 	} while (true);
 }
 
+int clsTaskManager::PrintTaskArray()
+{
+	for (int i = 0; i < 10; i++)
+		 printf("%p", p_TaskArray[i]);
+
+	return true;
+}
+
 bool clsTaskManager::Stop()
 {
 	return true;
