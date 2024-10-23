@@ -1,5 +1,5 @@
 #include "clsTaskManager.h"
-
+#include <iostream>
 #include <Windows.h>
 
 clsTaskManager::clsTaskManager(void)
@@ -18,9 +18,9 @@ clsTaskManager::~clsTaskManager(void)
 
 int clsTaskManager::AddTask(void (*p_TaskWrite)(void))
 {	
-	for (int i = 0; i < 10; i++) 
-	{
-		if (p_TaskArray[i] == NULL)
+	for (int i = 1; i < 10; i++)
+		if (p_TaskArray[i] = NULL)
+
 		{
 			p_TaskArray[i] = *p_TaskWrite;
 			break;
@@ -48,7 +48,7 @@ bool clsTaskManager::Run(void (*p_TaskFce)(void))
 		//pozastavit
 		Sleep(1000);
 
-		p_TaskFce();
+		
 
 	} while (true);
 }
